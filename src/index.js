@@ -4,12 +4,12 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import connectDB from "./db/index.js";
 import express from "express";
+import {app} from "./app.js"
 
 dotenv.config({
   path: ".env",
 });
 const port = process.env.PORT;
-const app = express();
 app.use(express.json());
 
 connectDB()
